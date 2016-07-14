@@ -8,22 +8,22 @@ def learning_dict():
   # open dictionary
   f = open('small_dict.txt', 'r')
   words = f.read().split()
-  
+
   # put into dictionary
   for word in words:
     normal_d[word.lower()] = None
 
-  h = open('small_string.txt', 'r')   
+  h = open('small_string.txt', 'r')
 
   # make a list of words from holy_grail.txt
   hg = h.read().split()
-  
+
   # number of mispelled words
   count = 0
-  
+
   incorrect_d = {}
   added = {}
-  
+
   for l in hg:
     # add regular expression to deal with periods
     match = re.search(r'[\"]*(\w+)[\".!,?,/]*', l)
@@ -35,7 +35,7 @@ def learning_dict():
         incorrect_d[l.lower()] = 1
         count = count + 1
       elif incorrect_d.get(l.lower()) == 1:
-         incorrect_d[l.lower()] = 2   
+         incorrect_d[l.lower()] = 2
          count = count  + 1
       else:
         incorrect_d.pop(l.lower())
@@ -50,6 +50,6 @@ def learning_dict():
 
 def main():
   learning_dict()
-  
+
 if __name__=='__main__':
   main()

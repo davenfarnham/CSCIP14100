@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 #
-# Question 2.1 
+# Question 2.1
 #
 # Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
@@ -12,8 +12,8 @@
 # get back [1, 2, 3, 4, 5, 6]
 #
 def list_merge(l, r):
-  
-#  
+
+#
 # Question 2.2
 #
 # Run length encoding for compression. This is BIG in compressing files. The basic

@@ -2,10 +2,10 @@
 
 #
 # Question 1.1 (Say My Name)
-# 
-# Below is a list of strings (single characters). They aren't in order though =/ 
 #
-# First, order the list below alphabetically. Then, after you've ordered it, recreate 
+# Below is a list of strings (single characters). They aren't in order though =/
+#
+# First, order the list below alphabetically. Then, after you've ordered it, recreate
 # the sentence 'python is awesome' by indexing into the array.
 #
 # For example, if I had a list l = ['1', '2'] and wanted to create a new number, I could do:
@@ -18,10 +18,10 @@
 def say_my_name():
 
   alpha = ['z', 'a', 'b', 'y', 'c', 'x', 'd', 'w', 'e', 'v', 'f', 'g', 'u', 'h', 'i', 'j', 't' 'k', 'l', 's', 'm', 'n', 
-            'r', 'o', 'p', 'q', ' ']  
-            
+            'r', 'o', 'p', 'q', ' ']
+
     # TODO
-            
+
 #
 # Question 1.2 (Order's up!)
 #
