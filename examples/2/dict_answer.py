@@ -8,18 +8,18 @@ small_dict = ['a', 'the', 'she', 'he', 'likes', 'CS', 'at', 'lives', 'Harvard', 
 
 # create a dictionary out of the list of words
 def use_dict():
-  
+
   # empty
   d = {}
 
   # set keys; just set values == None (kind of like OCAML)
   for s in small_dict:
-    d[s] = None  
+    d[s] = None
 
   # return dictionary
   return d
 
-# check your answer in the main function 
+# check your answer in the main function
 def main():
 
     # convert list to dict
@@ -29,13 +29,13 @@ def main():
     text = 'I think this might havs mispelled words in it'
     # remove whitespace; turn in to list of strings
     t_list = text.split()
-    
+
     # example text 2
     text_2 = 'HS students at Harvard'
     t_list_2 = text_2.split()
 
     error = False
- 
+
     # check and see if any of the words in texts are in the dict
     for t in t_list_2:
       if t not in d:
@@ -48,10 +48,10 @@ def main():
         print 'Mispelling!'
         error = True
         break
-    
+
     if not error:
       print 'All Looks good!'
-    
+
     return
 
 if __name__=='__main__':

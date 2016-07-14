@@ -6,8 +6,8 @@ def sub(s):
 
 def main():
   s = 'Daven is dumb'
-  
+
   print sub(s)
-  
+
 if __name__=='__main__':
   main()

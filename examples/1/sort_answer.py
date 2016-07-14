@@ -12,15 +12,15 @@ def helper(s):
 def string_sort(words):
   updated = sorted(words, key=len)
   print sorted(updated, key=helper)
-  
+
 def main():
-  l = ['aba', 'bab', 'crc', 'a', 'zz', 'f', 'aef', 'aazz']    
+  l = ['aba', 'bab', 'crc', 'a', 'zz', 'f', 'aef', 'aazz']
 
   # just to check what the default it
-  print sorted(l)    
-    
+  print sorted(l)
+
   string_sort(l)
-  
+
 if __name__=='__main__':
   main()
-  
+

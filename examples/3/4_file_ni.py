@@ -6,7 +6,7 @@ def count():
   out = open('output.txt', 'w')
 
   count = 0
-  
+
   # reads in one line at a time
   for line in f:
     match = re.findall(r'Knights Who Say ["]*Ni["]*', line)
@@ -21,6 +21,6 @@ def count():
 
 def main():
   count() # 6 + 4 = 10
-  
+
 if __name__=='__main__':
   main()

@@ -1,4 +1,4 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 
 def ho(f, x):
 

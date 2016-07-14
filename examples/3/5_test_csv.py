@@ -7,9 +7,9 @@ import re
 def parse():
 
   # TODO
-     
+
 def main():
     parse()
-    
+
 if __name__=='__main__':
     main()

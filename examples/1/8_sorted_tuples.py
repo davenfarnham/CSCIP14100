@@ -17,7 +17,7 @@ def main():
   tups = [(2, 1), (0, 4), (8, -1)]
 
   # check with normal sort function
-  print sorted(tups)  
+  print sorted(tups)
 
   # custom sort function
   print sorted(tups, key = tup) # pass in a custom function (can take only one argument)

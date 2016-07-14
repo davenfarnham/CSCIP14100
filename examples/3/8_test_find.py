@@ -6,8 +6,8 @@ def find(s, n, c):
   # TODO
 
 def main():
-  
+
   # TODO
-  
+
 if __name__=='__main__':
   main()

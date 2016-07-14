@@ -7,8 +7,8 @@ def change():
 
 def main():
   updated = change()
-  
+
   print updated
-  
+
 if __name__=='__main__':
   main()
