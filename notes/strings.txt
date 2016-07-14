@@ -1,0 +1,74 @@
+Strings & Lists
+
+    - If-else
+                        if something:   # if 'a' in list
+                          code
+                        else:
+                          code
+    
+    - For loops
+    
+                        for n in variable:  # go through each item in the list or string
+                          code
+                        
+                        for n in range(10):  # n increases < 10
+                          code
+                          
+                        while n > 10:
+                          code
+
+    - The big keywords you need to keep track of are 'for', 'in', 'while', 'if', 'else', 'elif'
+                          
+    - Strings in Python are immutable. If I declare a string with a = 'hello' I can't then do this: a[0] = 'm' 
+
+    - You can still access the contents of a string with this basic array notation, though. 
+        - a[0] == 'h'
+        - a[1] == 'e'
+        - a[2] == 'l'
+        - a[3] == 'l'
+        - a[4] == 'o'
+        
+    - You can also access strings in slices. So something like this a[2:] == 'llo', a[-1] == 'o', a[:-3] == 'he', a[1:4] == 'ell'
+    
+    - If you want to do int division, use //. Otherwise, similar to OCAML if you have a floating point number in the equation then the 
+      resultant value will be a float.
+        - 5.0 / 2.0 = 2.5
+        - 5.0 // 2.0 = 2.0
+        - 5 / 2.0 = 2.5
+        - 5 / 2 = 2
+
+    - To write on multiple lines, use a triple quote:
+        - print '''hi there
+                   you silly person'''
+
+        - print 'hi', 
+          print 'there'
+            - output: hi there
+        
+        - print will just standard also print a '\n' newline character. To prevent this, include a comma.
+        
+    - So, I think all strings are actually objects. Lots of methods that work on strings you use basic dot notation, which like in Java
+      means you're dealing with a method inside an object. So, for example if I want to turn a string 's' to all lowercase characters, then
+      s.lower(). s.split() will split a string based on spaces.
+        - these functions will return a new string since strings are immutable. So (1) s = 'hi' (2) m = s.upper() (3) s == 'hi' and m == 'HI' 
+
+    - Lists I think are passed by reference. Which means this:
+        - a = [1, 2, 3]
+        - b = a
+        - b[0] = 0
+        - a == [0, 2, 3]
+        
+        - What about strings? I'm not sure, but I would think they'd be passed by reference. It doesn't really seem to matter though, since they're
+          immutable. You'll never get a side effect in 'a' from doing something in 'b', like above.
+          
+    - Lots of functions return something new. for example a + b returns a and b concatenated, but you have to store the return value in another variable.
+        - if I use a list method like a.extend(b) the resultant value will be: [0, 2, 3, 0, 2, 3]. So a == [0, 2, 3, 0, 2, 3]. If I instead do something like
+          a + b, then a is still == [0, 2, 3]; I need to store the result of the addition somewhere else.
+          
+    - using sorted() returns a new, sorted list.
+    
+                        a = [0, 1, 4, 3, 2]
+                        b = sorted(a)                   # b == [0, 1, 2, 3, 4] while a == [0, 1, 4, 3, 2]
+                        
+        - you can pass a couple useful parameters to sorted(), such as 'key = ' & 'reverse = True'            
+    

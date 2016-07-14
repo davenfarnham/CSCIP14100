@@ -1,0 +1,209 @@
+[Visitas 2015 video: https://www.youtube.com/watch?v=3skuw7iPfJ4]
+
+What is Computer Science and why is it so important?
+  - You can think of computer science however you want: more theoretically as the study of computation 
+    and algorithms or, from a more applicable standpoint, programs and implementations that we use every day.
+    
+  - It's so important because it's ubiquitous, and it will continue to get even more so as time goes on.
+    - Think about everyday, in terms of you interacting with your computer or phone (not to mention cars and planes that, themselves, have millions of lines of code)
+      you're logging into Facebook, using Google, snapping people (and these are only some of the most popular internet programs). 
+      - [Millions of code: http://www.informationisbeautiful.net/visualizations/million-lines-of-code/]
+      
+    - In mathematics you might be using 'mathematica' or 'matlab' to help solve computational problems that would take 20-30 minutes otherwise. 
+      - [linear algebra example with mathematica]
+      
+    - Studying the genome takes enormous computational power, as does working with multimedia (building games, coming up with graphics for movies and TV)
+      - [Great Gatsby SFX video: https://www.youtube.com/watch?v=u_NreiUYdbw]
+      
+    - Science, research, exploration ...
+      - a bit of an aside, but do you know how much code was used to guide Nasa's Apollo missions to the moon
+        - [Margaret Hamilton with her code: https://goo.gl/AbMZZ1]
+      - now we have Elon Musk, SpaceX, the Philae Lander[https://twitter.com/Philae2014] (the amount of code they need is astronomical)
+        - the amount of code we need for things is increasing, seemingly exponentially (FB came out in 2004 and it already needs 80 million+ lines of code)
+        
+    - It's extremely exciting to be in computer science right now. If you look through the list of some of the most influential computer scientists ever, many of them are still alive. And
+      if you end up studying at places like Harvard or MIT or Stanford you'll be taking classes with them.
+      - it's like going to school and being able to take classes with Newton, or Gauss, or Euclid, or Feynman, or Einstein
+      - I kind of equate it to the early 20th century in physics, when consistently monumental discoveries were being made:
+        - Ernest Rutherford at Cambridge, Einstein's special relativity (1905) and general relativity (1915)
+        - Niels Bohr atomic structure and quantum theory (1922)
+        - Hiesenberg uncertainty principle (1927)
+        - the whole Manhattan Project (1942-1946)   
+    
+    - Things are also improving at breakneck speed. 
+      - [Moore's Law: number of transistors in an integrated circuit can double every 2 years: https://goo.gl/JLdOPJ]
+        - this has basically held true until recently, when the bottleneck hasn't been speed but rather power.
+      
+    - Computers have changed the world and they'll continue to do so, and so everyone has to have some understanding of how they work.
+    
+Alright, computers are dope, but are there problems? Absolutely.     
+  - Let's say you're building this hot new start up. You have a good idea, already gotten investment capital, hired some really good developers, what things do you have to worry about?
+    If you're creating a website (like Mark or Larry Page and Sergey Brin) what do you need to be aware of?
+    - Scalability
+      - this basically means, how can it grow. For example, if I build a little website, like the one for this class, I'm expecting a certain amount of traffic (users) - if the actual 
+        number of users far exceeds how many I'm expecting, the server my webpage is on is going to crash. And that's a problem.
+
+  - Speed
+    - We've all become so used to webpages rendering quickly; if I go to a site and have to wait 10, 20 seconds for something to load I might leave. In a program like excel, let's say
+      I want to sort 100,000 things, which isn't an unreasonable amount of data. If I do it with something like selection sort, that's going to take 100,000^2 operations, which is what,
+      10,000,000,000 operations! That's going to take time. Luckily, there are faster ways to sort things, but if you had to wait minutes for excel to sort a long list of values, you're going
+      to give up.
+
+  - Security
+    - [Security hacks (2004-present): [http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/]
+    - Wikileaks
+
+  - Sociability
+    - How often are you on Facebook, Instagram, Twitter, Pinterest, Reddit, Yelp - how do these things affect your choices.
+      - if I want to go to a restaurant, for example, I'm goint to check Yelp and if that restaurant has bad reviews, I might not go. There is a lot of power in social sites like these. 
+
+  - And probably the most interesting - questions of Morality
+    - [Twitter: http://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html]
+    - Right to be forgotten
+      - basically a concept that references the right of people to expunge certain bits of information from their past, so something like a misdemeanor might be removed from Google searches.
+        Is it fair that, say, I'm applying for a job and something stupid I did as a kid or decades ago will quickly show up to any potential employer who searches my name? 
+      - how does this relate to a right to information? Will it lead to censorship?
+      - what if someone hacks a celebrity's phone and posts their pictures online? Should those be taken down? Where's the line?
+
+  - These are problems, not only concrete but philosophical, and it's up to everyone to figure out what the best route forward is.
+
+Algorithms
+  - So let's switch gears a bit here and start talking a little bit more precisely about what it means for a computer to solve a
+    problem.
+
+  - Let's say I have a collection of objects, and I want to count them. As a person, through experience or just intuition, if 
+    the number of objects is small enough I can just tell. But what if there're quite a few objects? What do you do?
+    - you go down the line and sequentially add them up. What you're performing here, whether you realized it or not, is an 
+      algorithm. 
+
+  - Let's formally define what an algorithm is. An algorithm is (1) a defined set of instructions to solve a problem that will 
+    (2) eventually end. 
+    - Everything that a computer does, whether it's counting objects in a set or posting a message on Facebook, is defined 
+      by clear, precise instructions that eventually come to a conclusion. 
+      - when I'm coding, I never just write like "oh, just count the objects here and tell me how many there are." That is not
+        nearly precise enough. I mean, what do people generally find the most difficult about programming. Well it's the fact
+        you have to translate ideas into code; we call it code because it looks a little weird and follows a predefined set of 
+        rules.
+
+  - let's think of another example of an algorithm, for example addition.
+    - (1) add the two numbers in the nth position (where n = units, tens, hundreds, etc). (2) If their sum > 10, add 1 to the 
+      n+1 position and (3) write (sum % 10) in the n position.
+
+Conditionals
+  - The building blocks of algorithms are generally loops and conditionals. A conditional looks something like this:
+  
+  if(true):
+    # do this
+  else:
+    # do this
+    
+  - I've heard this described as branches, but I don't really like that visual. Many programming languages are procedural, which
+     we'll go over more in depth later, but what it basically means is that code is executed sequentially from top to bottom. Of 
+     course there are exceptions when for example you have parallelism and multi-threading, but for the most part it's a straight
+     line. The problem with the branching metaphor is it makes it seem that after the conditional the program will  
+     follow a discrete path different from any other coming out of the conditional statement.
+
+  - The below program proves that this isn't always the case:
+ 
+                    n = 0
+
+                    while (1):
+                      print 'still in a loop!'
+                      n = n + 1
+                      if(n==2): # can change this to < -2, talk about stopping & integer overflow
+                        break
+  
+                    # continue doing something 
+  
+  - Here, the conditional is acting more like a check than a fork.
+  
+Loops
+  - In the above, we use a conditional inside a loop. Loops do what they say they do, they continue doing something repeatedly. 
+  
+  - The general structure looks like this:
+  
+    while(true)
+      do something
+  
+  or
+  
+    for(declaration; condition; change)
+      do something
+    
+Project 1: Scratch
+  - So now that we have some tools, let's program. We're going to start not in the boring black and white terminal window, but
+    rather by using a graphical programming language developed at MIT called Scratch.  
+    - scratch demo
+
+Moving on to Python and Working in Cloud9
+  - terminal commands: cd (change directory), ls (list), mv (move), mkdir (make new directory), rm (remove), 
+    cp (copy), clear, etc ...
+
+  - much of what you can do via the console you can also do with the GUI, so the setup is veru similar to the 
+    appliance
+    
+Your first program
+  - looked very similar to this:
+
+                    #!/usr/bin/python 
+
+                    def hello_world():
+                        print 'howdy dudey!'
+                    return
+        
+                    def main():
+                        hello_world()
+                
+                    if __name__ == '__main__':
+                        main()
+
+  - in the above, the '#!/usr/bin/python' is basically just telling your machine, that 'hey, I'm about to show you
+    python code'.
+    
+  - below that I define a functino called 'hello_world()' that simply prints out a greeting using the print function.
+    Notice here, however, how the function print is indented. This is because Python uses whitespace to organize code.
+    The indentation here signifies that the 'print' function is a part of the 'hello_world()' function and should be 
+    called within it. 
+    
+  - next we define a 'main()' function, something every program has to have (kind of!). You need a 'main()' since
+    that is where the execution of your program is going to start. In the above program, it doesn't matter that we
+    declared the 'hello_world()' function above main; when I start running my program it will always start in the main()
+    function.
+    
+  - the only slightly cryptic piece of code is that "if __name__ == '__main__':" line. When many people teach Python
+    they wave their hand at this as simply boiler plate code you have to include. What it allows for, though, 
+    is modules to be passed around.
+      - Let's say I have two modules: a.py and b.py. Let's also say that b.py imports a.py (by import, all I mean is it
+        includes the code form a.py). If I call a.py directly by typing 'python a.py' it's name in the interpreter will 
+        be 'main' and thus it'll be run directly. If I instead run 'python b.py', now 'b.py''s name in the interpreter
+        will be 'main' while 'a.py's name will be 'a' - the interpreter thus knows it wants to only treat 'a.py' as a
+        collection of functions while it will actually run 'b.py' as the main program. 
+
+Simple example of loop and condition in Python
+                    
+                    #!/usr/bin/python 
+
+                    # create a list
+                    a = [1,2,3,4,5,6]
+
+                    # define a counter
+                    def count(b):
+                    counter = 0
+    
+                    # loop through list
+                    for num in b:
+                        counter = counter + num
+                    return counter
+                
+                    def main():
+                        # run your function
+                        sum = count(a)
+                      
+                        # conditional
+                        if sum > 20:
+                            print 'Ohh la la!'
+                        else:
+                            print 'no thanks!'
+                    
+                    if __name__ == '__main__':
+                      main()                                    

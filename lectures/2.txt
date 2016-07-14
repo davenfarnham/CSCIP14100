@@ -1,0 +1,95 @@
+- Dicts
+  - define a dict with either:
+  
+        d = {}
+        d['a'] = 1
+        d['b'] = 2
+        ...                                                                                   
+
+    or                                                                                    
+        d = {'a' : 1, 'b' : 2}
+                                                                                                         
+    These are different from lists since you can index into them with something
+    other than a number.
+                                                                                                                  
+### do 1_dict_test.py. Create a small spellchecker ###
+  - walk through distro code
+    - why even use a dict here? Why not a list?
+      - it should be faster O(1) instead of O(n)
+  - do this in chunks. So first have them do create_dict() where they basically just take a list and create
+    a dictionary from it.   
+  - then have then find a way to write use_dict()
+    - maybe using the keyword 'in' and a for loop
+  - have them run it on the test strings. make sure they convert all words to lower. It's too bad that words with punctuation are being reported as
+    errors...
+  - this is where REGEX comes in
+
+- Pattern matching
+  - regular expressions are probably the single most powerful part of python and the reason people use it so much.
+  
+  - regular expressions allow you to pattern match on words
+    - go back up and pattern match on each word as you check it: re.search(r'[.!,]$', l)
+
+  - the ways you can pattern match:
+    - using re.search(ptn, string) or re.findall(ptn, string)
+        - 'a, A, 9' : just straight matches
+        - . : any single character
+        - \w : any word character
+        - \s : any space character like space, newline, tab, return
+        - \d : [0-9]
+        
+    - so if I want to match the string out of s = '         hi         ' # so imagine there's an error inputting strings
+        - match = re.search(r'\w\w', s) # return a match object
+        - print match.group()
+        - show them 2_SW.py
+          - I can't just match on any word, since re.search will only return the first pattern it matches
+
+    - what's super powerful with regex is how you can specify patterns:
+        - '+' : 1 or more of the given occurences to the left
+        - '*' : 0 or more
+        - '^' : beginning of word
+        - '$' : end of word
+        - [ ] : escape certain characters. For exmaple, let's say I want to match on every word with a period.
+                or a +. Well those characters have certain meanings, so place them into the brackets to signify
+                I want to treat them as literals and not patterns.        
+
+                - so, for example, if I want to match on all words that have a period at the end I can do (r'[.]$', s) or
+                  I could do something like (r'\w+[.]', s)
+                  
+### do 3_test_emails.py ###
+  - find my email address in the string USING A PATTERN
+  
+  - So above we've basically just been using re.search() which is good, but you can only find one instance of a pattern. For example, 
+    let's say I had a string like this:
+    - 4_emails.py
+    - I can also separate out the name from the emails too, using ()
+
+### do 5_test_ni.py ###
+  - show knights who say nee scene
+  - implement your own count, like when you press ctr-f 
+  - find all occurences when they say 'Knights who say ni' except sometimes they say just NI and other times they sau "NI"
+    so make sure to account for that in your patterns
+  - answer in ni_answer.py
+    
+- Substituion
+  - once you find a word, you can also substitute in another for it:
+  - 6_sub.py
+
+### do 7_test_change.py ###
+  - change all grades that are less than a B to an A
+  - answer in change_answer.txt should print out correctly
+
+- Pset preview
+  - we talked a little bit earlier about how security wa a big deal. So this pset has to do with encryption. Now normally, like nowadays, 
+    most of the time we use something called RSA encryption.
+    - I give my public key to Bob, who uses it to encrypt a message. He then encrypts the message and sends it to me. Only I'll be able to
+      decrypt the msg, though, cause only I know the private key. So basically, all these messages are floating around, and Bob can't decrypt
+      what he wrote, but it doesn't matter since he knows it.
+      
+    - In this pset, you'll also be encrypting a message. 
+      - at the command line, you' take in two values: a key and a string to encrypt 
+        - use the fact that strings can be indexed into. Also, use the fact that characters can be given integer values. So ord('h') == 104
+          and chr(104) == 'h'
+          
+        - so, for example, if I gave you the key 'bc' and the string 'hello' : 'igmnp'
+          - remember to loop around, perhaps by using mod (%)

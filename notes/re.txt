@@ -1,0 +1,35 @@
+Regular Expressions
+
+    - regular expressions are basically just a way to match on patterns.
+        - I'm sure these were used in our python scripts: match on the magic numbers, then you can replace certain code by substituting in
+
+    - use the re module to access regular expressions
+    
+    - match = re.search(pat, string)        # search for the pattern 'pat' within the given 'string' (include r before pat to find the raw pattern)
+                                            # re.search apparently returns an object, since you can then call match.group() to find the pattern
+                                            # if it was found. It returns None which I think also automatically evaluates to False
+                                            
+    - basic patterns:
+        - regular numbers or characters
+        - a period matches anything but the newline
+        - '\w' matches any word character [a-zA-Z0-9_]
+        - '\s' matches a whitespace character
+        - '\' inhibits the specialness of a character
+        - '+' match on one or more occurrences to the left
+        - '*' match on zero or more occurrences to the left (so basically match on anything to the left)
+        - '?' zero or one occurrences
+        
+    - functions: search() # find first occurence, findall() # find all occurrences 
+                                            
+    - adding parens within patterns can allow you to access specific patters:
+        - str ='   hi   there    '
+        - match = re.search(r'\s+(\w+)\s+(\w+)', str) 
+            - match.group() == '   hi   there'
+            - match.group(0) == '   hi   there'
+            - match.group(1) == 'hi'            # since I put in parens
+            - match.group(2) == 'there'         # same reason
+        - match = re.search(r'\s+(\w+)\s+(\w+)', str) 
+            - match == [('hi', 'there')]        # puts the words in parens into a tuple
+            - match [0][0] == 'hi'
+            - match [0][1] == 'there'
+

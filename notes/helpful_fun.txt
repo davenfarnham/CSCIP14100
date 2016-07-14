@@ -1,0 +1,96 @@
+filter():
+    - just like in OCAML, this is used to filter across some iterable data type. So I can pass it a 
+      list, but I can also pass it a dict. The trick with using higher order functions in Python is
+      to denote the function with 'lambda':
+      
+                # with a list
+                lst = [1,2,3,4,5]
+                new_lst = filter(lambda x: x > 3, lst)
+                new_lst # [4, 5]
+                
+                # use a re
+                strings = ['hi', 'there', '4', '5', 'past', numbers']
+                filtered = filter(lambda x: re.search(r'\d+', x), strings)
+                filtered = ['4', '5']
+                
+                # use a loop
+                length = len(strings)
+                while i < length:
+                  if strings[i] != '4' and strings[i] != '5':
+                    strings.pop(i)
+                    length = length - 1
+                  else:
+                    i = i + 1
+                                      
+                # with a dict
+                dict = {'a' : 1, 'b' : 2, 'c' : 3}
+                new_dict = filter(lambda x: x > 1, dict)
+                new_dict # ['a', 'b', 'c']
+                new_dict = filter(lambda x: x > 1, dict.values())
+                new_dict # [2, 3]
+
+    '''
+    There must be an easier way to filter a dict and not just return a list:
+    '''
+
+                # to filter a dict based on values but still keep the dict
+                dict = {'a' : 1, 'b' : 2, 'c' : 3}
+                # function to help filter tuples based on values
+                def val(item):
+                  key, value = item
+                  return value
+                # get list of tuples
+                item = dict.items()
+                # filter it
+                filtered = filter(lambda x: val(x) > 1, item) # will return a list of tuples                
+
+                # put everything back in a new dict
+                new_dict = {}
+                for fil in filtered:
+                  key, value = fil
+                  new_dict[key] = value
+                  
+                new_dict # {'b' : 2, 'c' : 3}
+
+
+'any' and 'all' keywords:
+
+    - treat 'any' like boolean OR and 'all' like a boolean AND
+        
+                lst = ['string', 'another', 'here', 'comes', 'a', 'digit', '4']
+                any(re.search(r'\d+', x)) for x in lst)
+                [True]
+                all(re.search(r'\d+', x)) for x in lst)
+                [False]
+
+zip(): 
+
+    - take iterables, like two lists, and create a list of tuples pairing up the i'th terms:
+    
+                lst = zip (['a', 'b', 'c'], [1, 2, 3])      
+                lst # [('a', 1), ('b', 2), ('c', 3)]
+                
+                # I'm assuming dict takes a list ot tuples and creates a dictionary out of the
+                  members of the tuple
+                d = dict (lst)
+                d # {'a': 1, 'c': 3, 'b': 2}
+
+map():
+
+    - 
+
+reduce (tail recursive)
+
+    - 
+    
+re.search
+
+re.findall
+
+os functions
+
+    - 
+    
+shutil functions
+
+    - 

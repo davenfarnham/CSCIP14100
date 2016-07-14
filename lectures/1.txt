@@ -1,0 +1,116 @@
+### At the beginning, make a box full of keywords ###
+  - for
+  - while
+  - in
+  - else
+  - if
+  - elif
+  - range
+  - len()
+  - str()
+
+
+- Pump brakes and redo some of the code to make sure everyone is on the same page:
+  - Go over the super simple 'hello, world' program 1_hello.py
+    - what does the "if __name__ == '__main__': do?
+    - flow of program
+      - go over redirection in the program; in the conditional the if block calls main(),
+        which calls hello_world(), which finally does something.
+      - we do this because usually we're calling lots of functions so centralizing them in one
+        place, like main(), makes it better organized.
+  
+  - in this context, you can have the functions 'return' but you don't really need to
+  
+- Show an example of a module importing a function from another module
+  - 2_empty.py imports from fun.py
+  
+  - why would you want to do this? Well, it makes your code more organized. Python is nice - 
+    if you have a '__main__' conditional, you can both import or use a module directly.
+    
+  - right now fun.py doesn't have the '__main__' conditional; add it in and show the difference
+
+- Go over some keywords formally:
+  - For conditionals you have 'if', 'elif', and 'else'. 
+  - For Booleans you have 'not', 'and', 'or'
+    - do the 3_cond.py program
+      - it's good because it uses conditionals, importing, cmd-line
+      
+### Have everyone rewrite their 'hello, world' program, taking in their name in the command line
+    and printing out 'hello [name]'! ###
+  - my answer is in 4_hello_name.py (make sure they check that len of sys.argv > 1)
+
+- Go over formally loops
+  - what kind of loops do we have?
+    - we have while loops, which are easy
+    - then we have 2 basic kinds of for-loops
+
+  - Code from the website (also in 5_count.py)
+
+  - It's minor, but it's good to add 'in' to the list of keywords
+    - let's say you wanted to tell whether 'daven' is in a list of names, check:
+    
+                    if 'daven' in list:
+                      do something
+  
+- Lists (work in the interpreter)
+  - important to know, cause it's one of the easiest and cleanest ways to story data.
+  
+  - you've already seen lists. You've also seen how do index into a list
+    - do another example of indexing into a list
+    - you can also index negatively
+    - l = [1, 2, 3] 
+      - l[2] = l[-1]
+    
+  - another cool thing you can do is 'splice' a list. So, for example, let's say I have
+    list [1, 2, 3] then list[0: 2] == [1, 2]  
+    - [front : end)
+    - note, that this doesn't change the original list. Rather, you'd have to set a variable
+      equal to the outcome.
+        
+  - How would I add something to the current list? l.append()
+  
+  - So, for example, let's say I have list: 
+  
+                    l = [1, 2, 3]
+                    l.append(4)
+                    l == [1, 2, 3, 4]
+  
+  - redo count to dynamically generate the sum of numbers
+    - 6_count.py
+
+### do 7_list_test.py ###
+  - give them significant time on this, answer questions as needed.
+  - answer is in list_answer.py (remember to use .lower(), slices, and then
+    create a main program to CHECK your answer. There is no point writing a 
+    function if there's no way to check it.
+    
+- Tuples and Sorting (interpreter)
+  - if I want to just sort a list it's super easy. Just call
+  
+                    sorted(list)
+                    
+    so 
+                    l = [2, 1, 4, 0] 
+                    sorted(l) == [0, 1, 2, 4]
+                    
+                    s = ['b', 'a', 'c']
+                    sorted(s) == ['a', 'b', 'c']
+
+  - what's cool about the sorted() function is I can define my own key.
+    For example, s = ['this', 'is', 'a', 'list', 'of', 'strings']
+    
+        sorted(s) == ['a', 'is', 'list', 'of', 'strings', 'this']
+    
+    but I could also sort by another function
+    
+        sorted(s, key=len) = ['a', 'is', 'of', 'this', 'list', 'strings']
+
+    Tuples are combos of information in the form (a, b).
+    
+    Let's say I wanted to sort a tuple based on the second term.
+      - answer in 8_sorted_tuples.py    
+    
+### do 9_sort_test.py. Sort a list of strings based on their middle character ###
+  - make sure to sort based on length first
+  - amswer in sort_answer.py
+    -  l = ['aba', 'bab', 'crc', 'a', 'zz']  

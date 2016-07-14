@@ -1,0 +1,44 @@
+- "python" to run the interpreter
+- Ctr-D to exit the interpreter
+
+- no need for semicolons, you can just set variables like a = 2 or a = 'hi'
+
+- str(2) will turn the int 2 into a string
+
+- when writing a program you need to put "!/usr/bin/env python" which tells the computer that "hey! here comes some python code!"
+
+- when you are defining functions, you use def "function name(parameters):"
+    - these should come before the main() call since they must be defined before they are used
+    - it's common to put these at the top of your file and then call main() at the bottom; somewhat 
+      similar to how we have prototypes in C declared at the top of the file before we call main()
+    - everything is called sequentially, top to bottom, which is important to realize
+
+- Python is not checked at compile time but rather at runtime. This means if you have a mistake that isn't encountered, like a mistake
+  in a conditional, you might not know about it until the program runs down that path
+  
+- So you don't have to worry about being explicit with types, since they won't be checked at compile time, but you could write problems
+  into your code you won't know about until you run it (or have hidden problems you don't even know you have since you might not've encountered
+  that in the program flow)
+  
+- you have to mention indentation as important
+    - you don't use parens to denote blocks of code, but rather tabs (spaces)
+    
+- strings are immutable, meaning if a create a string a = 'hi ' and b = 'there' then a + b will be 'hi there' but it won't change what a and b are
+    - to save the result c = a + b
+    
+- I think things like sys are modules, whereas a string can be treated like an object. As such, many of the functions for strings are actually
+  object methods. str(2) will return 't', but str() I think is a method in the module sys. If I have a string, let's say 'daven' and want to run
+  a method on it, then I'd actually do something like 'daven'.find('a') # will return 1
+    - there are no chars in python. So if I have a string 'zabie' then 'zabie'[0] will be 'z', which is a string (though you can still use char
+      like operators on 'z', like =)
+    - slice strings with s[n:m] where n and m are indexes and n is included but m isn't
+    - r prefix for string raw (to include backslaches, etc)
+    - u for unicode
+
+- "Snake Charmer" pset name?
+
+- pset 1: Scratch (Due Tues before class)
+  pset 2: Basics  (Due Thurs before class)
+  pset 3: Snake Charmer (Dues Mon before class) 
+  pset 4: Sssifting Through Data (Due Wednes before class)
+  pset 5: ilovesnakes.com (Due Friday at midnight)

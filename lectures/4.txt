@@ -1,0 +1,32 @@
+- Do dictionary with them.
+
+- What is the internet?
+  - it's basically just an interconnected web of devices that are communicating with one
+    another. 
+   
+- If you're connected via something like an ethernet cable, ethernet -> routers -> servers 
+  Or, via APs, which are access points, you could we connect wirelessly.
+  
+- So, I either take my computer and physically plug it into a wall, or I connect wirelessly, and
+  now I'm part of this huge web of computers, devices, servers, routers, etc.
+  
+- This doesn't really give me any added information about what the internet is. I mean this underlying architecture
+  is interesting, but it's merely hardware to provide connectivity. What is this connectivity?
+  
+- The Basic Layers of the internet
+
+	- HTML example (1.html, 2.html, 3.html + style.css)
+  		- have them make their own webpage with a link, some styling, a picture, etc
+  
+	- After you've created your webpage, using developer tools go over:    
+    		- DOM
+    		- HTTP codes (open up facebook or reddit)
+        		- lots of 200s (OK), 307 (redirect), 304 not modified (for cached pages)
+
+- What's bad about the above example?
+  - we're re-using stuff HTML, remember how we factored out css that showed up in multiple places?
+
+- MVC
+  - what's the controller?
+
+- Pset (show them what to expect).

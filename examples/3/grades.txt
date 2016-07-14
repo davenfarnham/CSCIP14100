@@ -1,0 +1,7 @@
+Math                    C
+Computer Science        A
+Biology                 B
+Chemistry               D
+PE                      A
+Physics                 A
+English                 B

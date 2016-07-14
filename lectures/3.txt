@@ -1,0 +1,87 @@
+- Review Regular Expressions 
+  - what kind of regular expressions are there? (make a list on the board)
+    - \w : word
+    - \d : digit
+    - \s : space
+    - .  : anything
+    - [] : match literal
+    - +  : 1 or more
+    - *  : zero of more (basically match on anything)
+    - $  : end (s = 'hi there'; match = re.search(r'\w+e$', s); match.group() == there)
+    - ^  : beginning
+    
+  - go back to change_answer.py
+    - one way to make it work is to simply put: re.sub(r' [CDF]', r' A', grades)  
+    - better: (r'[CDF]\n', r'A\n', grades) - so here you're basically matching on the new line
+    
+  - talked a little but about matching on a certain number of things
+    - {some number} : specify # of characters to match
+    - | : also means or
+    - do 2_match_names.py # should illustrate | and {#}
+
+### do 3_test_ni.py ###
+  - show knights who say ni scene [https://www.youtube.com/watch?v=QTQfGd3G6dg]
+  - implement your own count, like when you press ctr-f 
+  - find all occurences when they say 'Knights who say ni' except sometimes they say just NI and other times they say "NI"
+    so make sure to account for that in your patterns
+  - answer in ni_answer.py; should get a total of 10 answers - can check with find in the actual file
+
+
+- File I/O
+  - for the past couple of days, we've been using open() to open a file
+
+  - there are two basic ways to do it: 
+    - f = open(file, r)
+      
+      for line in f:
+        # do something
+        
+    - show them modified 4_file_ni.py
+      - this file both reads in one line at a time, and it also prints out the line where it finds the match
+    
+    - you can also just use:
+      - f.read() to read the whole file into one like string
+
+    - if I want to write something, I just open the file like with reading, except f = open(filename, 'w')
+      - f.write(somes string)
+    
+### do 5_test_csv.py ###
+  - Read in the csv, match names with phone numbers, print out Name: Number to a new file
+  - it makes sense to read in a line at a time and then write out a line at a time
+  - notice only names start with capital letters
+    - can do [1-9]
+
+
+- Recursion [https://www.youtube.com/watch?v=MHBlYJ-tKcs]
+  - a function calling itself
+  - it has to have a base case
+  - 6_sum.py (just like the example we did from last week!)
+  - 7_fib.py
+  
+## do 8_test_find.py ###
+  - use recursion to find character c in string s (n is the length of the string s)
+  
+
+- Higher Order Functions
+  - basically it's a function that takes another function
+  - the functions we wrote today they primarily took strings or ints as parameters - well, we can pass in functions as parameters
+  - filter, map, reduce (switch to interpreter)
+  
+  - filter does what it sounds like: it can filter things out of a list; map applies some function to everything in a list; reduce
+    goes down a list, taking two parameters instead of one
+    - filter a list of numbers, excluding all numbers that are less than 10 
+      - l = [10, 5, 18, 28, 19] -> filter(lambda x: x > 10,l)
+      - map(lambda x: x * 2, l)
+      - reduce(lambda x, y: x + y, l, 0) # for example, you remember in count() where you created a list of ints and then used
+                                         # a for loop to count the numbers - well, you could've done it in one line with a HO function
+
+        - l = [1, 2, 3, 4, 5] -> reduce l -> ((((1 + 2) + 3) + 4) + 5)
+      
+  - show them we can create our own HO functions -> create a version of map 
+    - 9_create_ho.py
+
+### do 10_test_ho.py ###
+  - use a higher order function to print out a string with only len(names) == 6 || 4
+  - string.split() to get a list
+  - filter over the list with the function you're passing in a regex
+  - put the list items back together

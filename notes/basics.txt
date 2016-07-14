@@ -1,0 +1,64 @@
+Python Basics:
+
+    - It's useful to use the Python interpreter in the terminal - just type 'python' to start it (kind of like the top level from OCAML).
+      To quit, type CTRL-D
+    
+    - useful prelim functions (I think in the sys module)
+        - len() : finds the length of a string, list, dict, etc.
+        - str() : turns something into a string. Can be used with ints, floats, dicts, etc.
+            - to declare a dict, do something like: dict = {'a' : 1, 'b' : 2}. You can have different types as your keys, which is weird
+    
+    - There's no real need to use brackets. The control flow of the program is basically government by indentation.
+    
+    - when you use '+' as a concatentation operator, you can't concatenate a string and an int (it won't know to automatically convert the int
+      to a string). You'll have to do something like this: s + str(i)
+    
+    - multiple ways to print something
+        - print string # variable
+        - print 'This is a %s %s' # % ('formatted', 'string') # takes a tuple for some reason
+        - print 'This is passing in an %(arg)s' % {'arg' : 'argument'}
+    
+    - a basic program will look like this:
+    
+            #!/usr/bin/env python           # just telling the computer that here comes some python!
+            
+            import sys                      # just like #including a library in C
+            
+            def fun():                      # define some function, usually above main. The program will run sequentially, from top to
+                # code                        bottom, so if you define this below main, you'll have to use something like a prototype.
+            
+            def main():                     # define your main function, which calls the sub function fun()
+                fun()
+                
+            if __name__ = '__main__':       # boiler plate
+              main()                        # run main()
+
+    - if you pass in command line arguments to your program, you can access them via sys.argv[i] where i is the position of the term. If you 
+      want something like argc, simply do len(sys.argv)
+    
+    - compilation: source code -> object code
+        - obviously this takes time
+        - but you can check things, like types and mistakes, easily 
+        
+    - In python, code is checked at runtime instead of at compile time. This means that I can have errors in my code, and as long as I don't encounter
+      that error during a particular program flow, I might not know about it
+      
+      this works, for example
+      
+                v = True
+
+                if v == True:      
+                    print 'hi!'
+                else:            
+                    blah                    # never actually get to this
+
+Takeaways:
+    
+    - being interpreted makes it very different than like C and OCAML. You don't have to spent time compiling, you don't have to declare data types, it 
+      gives you a lot more freedom to program. The downside is, though, you might make a mistake and not know since you don't have a compiler to check your
+      work for you.
+      
+    - it seems somewhat cleaner, using identation instead of brackets
+    
+    - it incorporates elements from procedural and functional programming: top down, sequential program flow, ability to change and maintain state, pattern 
+      matching

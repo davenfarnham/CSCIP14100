@@ -1,0 +1,41 @@
+0:Scratch
+
+This pset is simply meant to introduce you to some concepts important throughout programming.
+Even though Scratch uses a GUI, the concepts and tools it introduces are easily transferrable across
+languages.
+
+Setup
+
+First, head on over to [MIT's Scratch: https://scratch.mit.edu/],select 'join scratch' and 
+sign up.
+
+You should get an email, so remember to check for it so you can share your project with me
+later!
+
+After you've created an account you should be logged in. In the top left hand corner there should
+be an icon to 'create' which will take you to an editor.
+
+Once there, feel free to play around with any of the blocks that control the actions of the cat!
+
+Tasks
+
+For this pset, your goal is to:
+
+
+                    (1) Change the background
+                    (2) Include at least 1 sound
+                    (3) Include at least 3 sprites
+                    (4) Use a conditional
+                    (5) Use a loop
+                    (6) and use a variable
+
+Submission
+
+Once you've created a program that includes all 6 of the above tasks, in the top right hand corner
+there should be a button that says 'share'. Click it (making sure you've confirmed your email). Once you do
+you'll be taken to your project page. There, click 'share' one more time and copy the ensuing URL of your 
+project. 
+
+Fill out this form and you're done!
+
+

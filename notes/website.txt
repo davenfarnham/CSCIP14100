@@ -1,0 +1,15 @@
+How does the PHP version of MVC work?
+    - you have your controllers which are php files
+    - based on some logic in the php file, it'll render() a template. The
+      render function automatically includes the header.php and footer.php
+      files, passing in the name of whatever the content should be as variable.
+        - header.php
+        - <variable>.php
+        - footer.php
+        
+If you want to run HTML on your local machine, easy, just open whatever file you 
+have in a browser.
+
+If you want to run PHP though, since it's a server side language you have to run 
+a server off your local machine. This is easily done using MAMP. Simply start 
+it up, then access any files you've put into htdocs by going to: http://localhost:8888        
